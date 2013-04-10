@@ -1,0 +1,16 @@
+name = HTML5
+description = Simple base html5 theme.
+core = 7.x
+version = 7.x-1.0
+hidden = TRUE
+
+features[] = logo
+features[] = favicon
+features[] = secondary_menu
+
+regions[header] = Header
+regions[content] = Content
+regions[sidebar_first] = Left sidebar
+regions[footer] = Footer
+
+stylesheets[all][] = css/normalize.css
