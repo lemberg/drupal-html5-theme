@@ -14,3 +14,4 @@ regions[sidebar_first] = Left sidebar
 regions[footer] = Footer
 
 stylesheets[all][] = css/normalize.css
+stylesheets[all][] = css/html5.css

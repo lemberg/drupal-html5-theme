@@ -1,0 +1,7 @@
+/*
+ * Fixes Drupal default clearfix.
+ */
+
+.clearfix:after {
+    content: "";
+}

@@ -81,17 +81,19 @@ body {
     margin: 0;
 }
 
+/**
+* Remove outline for focused elements.
+*/
+
+a:focus,
+input:focus,
+textarea:focus {
+    outline: 0;
+}
+
 /* ==========================================================================
    Links
    ========================================================================== */
-
-/**
- * Address `outline` inconsistency between Chrome and other browsers.
- */
-
-a:focus {
-    outline: thin dotted;
-}
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
@@ -399,4 +401,12 @@ textarea {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+/**
+ * Remove bullets for lists.
+ */
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
