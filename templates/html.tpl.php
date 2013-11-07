@@ -46,9 +46,6 @@
     <?php print $head; ?>
     <title><?php print $head_title; ?></title>
     <?php print $styles; ?>
-    <!--[if lt IE 9]>
-      <script src="<?php print base_path() . path_to_theme() ?>/js/html5shiv.js"></script>
-    <![endif]-->
     <?php print $scripts; ?>
   </head>
   <body class="<?php print $classes; ?>" <?php print $attributes; ?>>
