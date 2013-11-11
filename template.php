@@ -8,7 +8,8 @@ function html5_preprocess_page() {
     '#tag' => 'script',
     '#value' => '',
     '#attributes' => array(
-      'src' => drupal_get_path('theme', 'html5') . '/js/html5shiv.js',
+      'src' => file_create_url(drupal_get_path('theme', 'html5') . '/js/html5shiv.js'),
+      'type' => 'text/javascript',
     ),
     '#prefix' => '<!--[if lte IE 8]>',
     '#suffix' => '<![endif]-->',
