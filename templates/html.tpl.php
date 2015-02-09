@@ -42,7 +42,7 @@
 ?><!DOCTYPE html>
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
   <head>
-    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" id="viewport" content="width=device-width">
     <?php print $head; ?>
     <title><?php print $head_title; ?></title>
     <?php print $styles; ?>
