@@ -1,0 +1,98 @@
+
+$font-size-h1: floor(($font-size-base * 2.6));
+$font-size-h2: floor(($font-size-base * 2.15));
+$font-size-h3: ceil(($font-size-base * 1.7));
+$font-size-h4: ceil(($font-size-base * 1.25));
+$font-size-h5: $font-size-base;
+$font-size-h6: ceil(($font-size-base * 0.85));
+
+
+
+body {
+	font-family: $font-regular;
+	font-size: $font-size-base;
+	color: $color-text;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	font-family: $font-regular;
+	text-transform: uppercase;
+	line-height: 1.2;
+	a {
+		color: inherit;
+	}
+}
+h1 {
+	font-size: $font-size-h1;
+}
+h2 {
+	font-size: $font-size-h2;
+}
+h3 {
+	font-size: $font-size-h3;
+}
+h4 {
+	font-size: $font-size-h4;
+}
+h5 {
+	font-size: $font-size-h5;
+}
+h6 {
+	font-size: $font-size-h6;
+}
+
+
+p {
+	font-size: $font-size-base;
+	line-height: 1.25;
+	margin: 1.25em 0;
+}
+a {
+	color: $color-link;
+	text-decoration: none;
+}
+ul, ol {
+	margin: 1.25em 0;
+	padding: 0 0 0 $margin;
+	li {
+		margin: 0;
+	}
+}
+strong {
+  @if global-variable-exists(font-bold) {
+    font-family: $font-bold;
+    font-weight: normal;
+  }
+}
+table {
+	width: 100%;
+	border-style: solid;
+	border-color: $color-border;
+	margin: 1.25em 0;
+	tbody,
+	tr,
+	td {
+		border-color: $color-border;
+	}
+	td,
+	th {
+		font-size: $font-size-base;
+		line-height: 1.25;
+		padding: 5px;
+	}
+	th {
+    @if global-variable-exists(font-bold) {
+      font-family: $font-bold;
+      font-weight: normal;
+    }
+		text-align: left;
+	}
+	caption {
+    @if global-variable-exists(font-bold) {
+      font-family: $font-bold;
+      font-weight: normal;
+    }
+		text-align: center;
+		padding: 5px;
+	}
+}
