@@ -67,61 +67,45 @@
  */
 ?>
 
-<div id="page">
+<div class="page-wrap">
 
   <header class="clearfix">
 
     <?php if ($logo): ?>
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="logo">
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
     <?php endif; ?>
 
-    <?php if ($main_menu): ?>
-      <nav class="navigation">
-        <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
-      </nav> <!-- /nav -->
-    <?php endif; ?>
-
     <?php print render($page['header']); ?>
 
-  </header> <!-- /header -->
+  </header>
 
 
-  <div id="main" class="clearfix">
+  <main role="main" class="clearfix">
 
     <?php if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+      <?php print $breadcrumb; ?>
     <?php endif; ?>
 
     <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
 
     <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
 
-    <div id="content">
+    <div class="content">
       <?php print render($title_prefix); ?>
-      <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+      <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1><?php endif; ?>
       <?php print render($title_suffix); ?>
 
       <?php print $messages; ?>
 
       <?php print render($page['content']); ?>
-    </div> <!-- /#content -->
+    </div>
 
-    <?php if ($page['sidebar_first']): ?>
-      <?php print render($page['sidebar_first']); ?>
-    <?php endif; ?>
-
-  </div> <!-- /#main -->
+  </main>
 
   <footer>
-    <?php if ($secondary_menu): ?>
-      <nav class="navigation">
-        <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
-      </nav> <!-- /nav -->
-    <?php endif; ?>
-
     <?php print render($page['footer']); ?>
-  </footer> <!-- /footer -->
+  </footer>
 
-</div> <!-- /#page -->
+</div>
