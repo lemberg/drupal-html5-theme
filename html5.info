@@ -6,12 +6,19 @@ hidden = TRUE
 
 features[] = logo
 features[] = favicon
-features[] = secondary_menu
 
 regions[header] = Header
+regions[help] = Help
+regions[highlighted] = Highlighted
 regions[content] = Content
 regions[sidebar_first] = Left sidebar
+regions[sidebar_second] = Right sidebar
 regions[footer] = Footer
+
+regions_hidden[] = Help
+regions_hidden[] = Highlighted
+regions_hidden[] = Left sidebar
+regions_hidden[] = Right sidebar
 
 stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/html5.css
