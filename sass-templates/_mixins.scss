@@ -1,10 +1,11 @@
-
+//Adds ellipsis for long texts
 @mixin ellipsis {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
 
+//Setting color of form item's placeholder
 @mixin form-item-placeholder($color: $color-primary) {
 	&::-webkit-input-placeholder {
 		color: $color;
@@ -41,6 +42,7 @@
 	}
 }
 
+//Importing custom fonts
 @mixin font-face($font-name){
 	@font-face {
 		font-family: '#{$font-name}';
@@ -61,7 +63,6 @@
 	display: -webkit-flex;
 	display: flex;
 }
-
 @mixin flex($values) {
 	-webkit-box-flex: $values;
 	-moz-box-flex:  $values;
@@ -69,13 +70,11 @@
 	-ms-flex:  $values;
 	flex:  $values;
 }
-
 @mixin flex-direction($value) {
   -webkit-flex-direction: $value;
   -moz-flex-direction: $value;
   flex-direction: $value;
 }
-
 @mixin flex-order($value) {
 	-webkit-box-ordinal-group: $value;
 	-moz-box-ordinal-group: $value;
@@ -84,6 +83,7 @@
 	order: $value;
 }
 
+//Adds triangle arrow using border properties
 @mixin border-arrow($direction, $width, $height, $color) {
   width: 0;
   height: 0;
@@ -106,6 +106,7 @@
   }
 }
 
+//Transition mixin
 @mixin transition($property: all, $duration: 0.5, $delay: 0, $timing: ease) {
 	-webkit-transition: #{$property} #{$duration}s;
 	transition: #{$property} #{$duration}s;
