@@ -1,0 +1,32 @@
+$page-width: 1200px;
+$margin: 20px;
+$sidebar-left-width: 280px;
+$sidebar-right-width: 300px;
+$navigation-height: 90px;
+$footer-height: 45px;
+$form-item-height: 50px;
+$curve: 3px;
+
+$mobile-margin: 10px;
+$mobile-menu-width: 230px;
+$mobile-form-item-height: 25px;
+
+
+$font-size-base: 14px;
+$font-size-small: ceil(($font-size-base * 0.85));
+
+$color-primary: #08426f;
+$color-secondary: #5ba0d5;
+$color-tertiary: #94ba65;
+$color-link: #79b0da;
+$color-accent: #f5a314;
+$color-border: #adadad;
+$color-bg: #f2f2f2;
+$color-text: #5e5e5e;
+$color-error: #e64545;
+
+
+$font-regular: 'PTSans-Regular';
+$font-bold: 'PTSans-Bold';
+
+$breakpoint-mobile: 767px;

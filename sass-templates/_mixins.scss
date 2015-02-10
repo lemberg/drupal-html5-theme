@@ -1,0 +1,116 @@
+
+@mixin ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin form-item-placeholder($color: $color-primary) {
+	&::-webkit-input-placeholder {
+		color: $color;
+		-webkit-transition: color 0.5s;
+		transition: color 0.5s;
+	}
+	&:-moz-placeholder {
+		color: $color;
+		transition: color 0.5s;
+		opacity: 1;
+	}
+	&::-moz-placeholder {
+		color: $color;
+		transition: color 0.5s;
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+		transition: color 0.5s;
+	}
+	&:focus {
+		&::-webkit-input-placeholder {
+			color: transparent;
+		}
+		&:-moz-placeholder {
+			color: transparent;
+		}
+		&::-moz-placeholder {
+			color: transparent;
+		}
+		&:-ms-input-placeholder {
+			color: transparent;
+		}
+	}
+}
+
+@mixin font-face($font-name){
+	@font-face {
+		font-family: '#{$font-name}';
+		src: url('../fonts/#{$font-name}.eot');
+		src: url('../fonts/#{$font-name}.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/#{$font-name}.woff') format('woff'),
+		url('../fonts/#{$font-name}.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+
+/*Flex Box mixins*/
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flex($values) {
+	-webkit-box-flex: $values;
+	-moz-box-flex:  $values;
+	-webkit-flex:  $values;
+	-ms-flex:  $values;
+	flex:  $values;
+}
+
+@mixin flex-direction($value) {
+  -webkit-flex-direction: $value;
+  -moz-flex-direction: $value;
+  flex-direction: $value;
+}
+
+@mixin flex-order($value) {
+	-webkit-box-ordinal-group: $value;
+	-moz-box-ordinal-group: $value;
+	-ms-flex-order: $value;
+	-webkit-order: $value;
+	order: $value;
+}
+
+@mixin border-arrow($direction, $width, $height, $color) {
+  width: 0;
+  height: 0;
+  @if $direction == 'top' or $direction == 'bottom' {
+    border-left: #{round($width/2)}px solid transparent;
+    border-right: #{round($width/2)}px solid transparent;
+    @if $direction == 'top' {
+      border-bottom: #{$height}px solid $color;
+    } @else {
+      border-top: #{$height}px solid $color;
+    }
+  } @else {
+    border-top: #{round($height/2)}px solid transparent;
+    border-bottom: #{round($height/2)}px solid transparent;
+    @if $direction == 'left' {
+      border-right: #{$width}px solid $color;
+    } @else {
+      border-left: #{$width}px solid $color;
+    }
+  }
+}
+
+@mixin transition($property: all, $duration: 0.5, $delay: 0, $timing: ease) {
+	-webkit-transition: #{$property} #{$duration}s;
+	transition: #{$property} #{$duration}s;
+	-webkit-transition-delay: #{$delay}s;
+	transition-delay: #{$delay}s;
+	-webkit-transition-timing-function: $timing;
+	transition-timing-function: $timing;
+}
