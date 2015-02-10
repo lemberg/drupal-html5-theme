@@ -1,4 +1,6 @@
 
+/*Make sure to import the variables and mixins sheets to the main stylesheet.*/
+
 $font-size-h1: floor(($font-size-base * 2.6));
 $font-size-h2: floor(($font-size-base * 2.15));
 $font-size-h3: ceil(($font-size-base * 1.7));
@@ -6,6 +8,10 @@ $font-size-h4: ceil(($font-size-base * 1.25));
 $font-size-h5: $font-size-base;
 $font-size-h6: ceil(($font-size-base * 0.85));
 
+@if mixin-exists(font-face) {
+  @include font-face($font-regular);
+  @include font-face($font-bold);
+}
 
 
 body {
