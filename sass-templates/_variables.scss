@@ -1,18 +1,12 @@
 $page-width: 1200px;
-$margin: 20px;
-$sidebar-left-width: 280px;
-$sidebar-right-width: 300px;
-$navigation-height: 90px;
-$footer-height: 45px;
+$margin: 16px;
 $form-item-height: 50px;
-$curve: 3px;
-
-$mobile-margin: 10px;
-$mobile-menu-width: 230px;
-$mobile-form-item-height: 25px;
+$animation-duration: 0.25s;
+$columns: 12;
 
 
-$font-size-base: 14px;
+
+$font-size-base: 16px;
 $font-size-small: ceil(($font-size-base * 0.85));
 
 $color-primary: #08426f;
@@ -29,4 +23,4 @@ $color-error: #e64545;
 $font-regular: 'PTSans-Regular';
 $font-bold: 'PTSans-Bold';
 
-$breakpoint-mobile: 767px;
+$bp-mobile: 767px;
