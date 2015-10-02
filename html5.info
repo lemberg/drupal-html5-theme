@@ -20,5 +20,4 @@ regions_hidden[] = Highlighted
 regions_hidden[] = Left sidebar
 regions_hidden[] = Right sidebar
 
-stylesheets[all][] = stylesheets/normalize/normalize.css
 stylesheets[all][] = stylesheets/html5.css

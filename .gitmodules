@@ -1,0 +1,3 @@
+[submodule "stylesheets/normalize"]
+	path = stylesheets/normalize
+	url = https://github.com/necolas/normalize.css.git

@@ -16,7 +16,8 @@ HTML5 is clean, simple and light theme that brings semantic HTML5 markup to the 
 
 REQUIREMENTS
 ------------
-This theme requires Drupal 7.x
+* To get the latest version of [normalize.css](https://github.com/necolas/normalize.css/) run 'git submodule update --init'
+* This theme requires Drupal 7.x
 
 
 INSTALLATION
@@ -27,5 +28,5 @@ To eneable HTML5 theme, define it in your theme's .info file as a base theme(e.g
 
 FEATURES
 ------------
-- HTML5 markup
-- Normalize CSS
+* HTML5 markup
+* Normalize CSS
